@@ -9,8 +9,7 @@ from homeassistant.const import (
     CONCENTRATION_PARTS_PER_MILLION,
     PERCENTAGE,
     Platform,
-    UnitOfEnergy,
-    UnitOfPower,
+    UnitOfEnergy,`n    UnitOfPressure,`n    UnitOfPower,
     UnitOfTemperature,
     UnitOfTime,
     UnitOfVolume,
@@ -1357,7 +1356,17 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
                 "unit": UnitOfTemperature.CELSIUS,
                 "state_class": SensorStateClass.MEASUREMENT,
             },
-        },
+                    C3Attributes.fg_defrost: {"type": Platform.BINARY_SENSOR, "translation_key": "defrosting", "name": "Defrosting", "device_class": BinarySensorDeviceClass.RUNNING},
+            C3Attributes.pressure_high: {"type": Platform.SENSOR, "translation_key": "pressure_high", "name": "High Pressure", "device_class": SensorDeviceClass.PRESSURE, "unit": UnitOfPressure.KPA, "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.pressure_low: {"type": Platform.SENSOR, "translation_key": "pressure_low", "name": "Low Pressure", "device_class": SensorDeviceClass.PRESSURE, "unit": UnitOfPressure.KPA, "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.temp_t4: {"type": Platform.SENSOR, "translation_key": "temp_t4", "name": "T4 Temperature", "device_class": SensorDeviceClass.TEMPERATURE, "unit": UnitOfTemperature.CELSIUS, "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.temp_t5: {"type": Platform.SENSOR, "translation_key": "temp_t5", "name": "T5 Temperature", "device_class": SensorDeviceClass.TEMPERATURE, "unit": UnitOfTemperature.CELSIUS, "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.instant_power0: {"type": Platform.SENSOR, "translation_key": "instant_power", "name": "Instant Power", "device_class": SensorDeviceClass.POWER, "unit": UnitOfPower.WATT, "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.instant_renew_power0: {"type": Platform.SENSOR, "translation_key": "instant_renew_power", "name": "Instant Renewable Power", "device_class": SensorDeviceClass.POWER, "unit": UnitOfPower.WATT, "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.exv_current: {"type": Platform.SENSOR, "translation_key": "exv_current", "name": "EXV Current", "icon": "mdi:valve", "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.comp_run_freq: {"type": Platform.SENSOR, "translation_key": "comp_run_freq", "name": "Compressor Frequency", "icon": "mdi:sine-wave", "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.water_pressure: {"type": Platform.SENSOR, "translation_key": "water_pressure", "name": "Water Pressure", "device_class": SensorDeviceClass.PRESSURE, "unit": UnitOfPressure.KPA, "state_class": SensorStateClass.MEASUREMENT},
+            },
     },
     0xCA: {
         "name": "Refrigerator",
@@ -2922,3 +2931,6 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
         },
     },
 }
+
+
+
