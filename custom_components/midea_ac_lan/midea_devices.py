@@ -1253,6 +1253,24 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
                 "name": "Zone2 Curve",
                 "icon": "mdi:chart-bell-curve-cumulative",
             },
+            C3Attributes.zone1_curve_type: {
+                "type": Platform.NUMBER,
+                "translation_key": "zone1_curve_type",
+                "name": "Zone1 Curve Type",
+                "icon": "mdi:chart-bell-curve-cumulative",
+                "min": 0,
+                "max": 10,
+                "step": 1,
+            },
+            C3Attributes.zone2_curve_type: {
+                "type": Platform.NUMBER,
+                "translation_key": "zone2_curve_type",
+                "name": "Zone2 Curve Type",
+                "icon": "mdi:chart-bell-curve-cumulative",
+                "min": 0,
+                "max": 10,
+                "step": 1,
+            },
             C3Attributes.zone1_power: {
                 "type": Platform.SWITCH,
                 "translation_key": "zone1_power",
@@ -2934,7 +2952,6 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
         },
     },
 }
-
 
 
 
