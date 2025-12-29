@@ -1394,6 +1394,16 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
             C3Attributes.temp_ta: {"type": Platform.SENSOR, "translation_key": "temp_ta", "name": "Ambient Temperature", "device_class": SensorDeviceClass.TEMPERATURE, "unit": UnitOfTemperature.CELSIUS, "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.temp_tw_in: {"type": Platform.SENSOR, "translation_key": "temp_tw_in", "name": "Water Inlet Temperature", "device_class": SensorDeviceClass.TEMPERATURE, "unit": UnitOfTemperature.CELSIUS, "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.temp_tw_out: {"type": Platform.SENSOR, "translation_key": "temp_tw_out", "name": "Water Outlet Temperature", "device_class": SensorDeviceClass.TEMPERATURE, "unit": UnitOfTemperature.CELSIUS, "state_class": SensorStateClass.MEASUREMENT},
+            # Additional binary flags
+            C3Attributes.back_oil: {"type": Platform.BINARY_SENSOR, "translation_key": "back_oil", "name": "Back Oil", "icon": "mdi:oil"},
+            C3Attributes.tbh_enable: {"type": Platform.BINARY_SENSOR, "translation_key": "tbh_enable", "name": "TBH Enable", "icon": "mdi:water-boiler"},
+            C3Attributes.ibh1_enable: {"type": Platform.BINARY_SENSOR, "translation_key": "ibh1_enable", "name": "IBH1 Enable", "icon": "mdi:radiator"},
+            C3Attributes.dhw_run: {"type": Platform.BINARY_SENSOR, "translation_key": "dhw_run", "name": "DHW Running", "icon": "mdi:water-boiler", "device_class": BinarySensorDeviceClass.RUNNING},
+            C3Attributes.heat_run: {"type": Platform.BINARY_SENSOR, "translation_key": "heat_run", "name": "Heating Running", "icon": "mdi:heat-pump", "device_class": BinarySensorDeviceClass.RUNNING},
+            C3Attributes.cool_run: {"type": Platform.BINARY_SENSOR, "translation_key": "cool_run", "name": "Cooling Running", "icon": "mdi:snowflake", "device_class": BinarySensorDeviceClass.RUNNING},
+            C3Attributes.tbh_output: {"type": Platform.BINARY_SENSOR, "translation_key": "tbh_output", "name": "TBH Output", "icon": "mdi:water-boiler", "device_class": BinarySensorDeviceClass.RUNNING},
+            C3Attributes.ibh2_output: {"type": Platform.BINARY_SENSOR, "translation_key": "ibh2_output", "name": "IBH2 Output", "icon": "mdi:radiator", "device_class": BinarySensorDeviceClass.RUNNING},
+            C3Attributes.ibh1_output: {"type": Platform.BINARY_SENSOR, "translation_key": "ibh1_output", "name": "IBH1 Output", "icon": "mdi:radiator", "device_class": BinarySensorDeviceClass.RUNNING},
             C3Attributes.comp_run_freq: {"type": Platform.SENSOR, "translation_key": "comp_run_freq", "name": "Compressor Frequency", "icon": "mdi:sine-wave", "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.water_pressure: {"type": Platform.SENSOR, "translation_key": "water_pressure", "name": "Water Pressure", "device_class": SensorDeviceClass.PRESSURE, "unit": UnitOfPressure.KPA, "state_class": SensorStateClass.MEASUREMENT},
             },
@@ -2961,5 +2971,4 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
         },
     },
 }
-
 
