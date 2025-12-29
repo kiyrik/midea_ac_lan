@@ -134,7 +134,7 @@ class MideaFan(MideaEntity, FanEntity):
     def update_state(self, status: Any) -> None:  # noqa: ANN401, ARG002
         """Midea Fan update state."""
         if not self.hass:
-            _LOGGER.warning(
+            _LOGGER.debug(
                 "Fan update_state skipped before add: device=%s key=%s type=%s",
                 getattr(self._device, "device_id", "unknown"),
                 getattr(self, "_entity_key", "unknown"),

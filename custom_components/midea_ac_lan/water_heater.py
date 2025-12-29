@@ -189,9 +189,9 @@ class MideaWaterHeater(MideaEntity, WaterHeaterEntity):
     def update_state(self, status: Any) -> None:  # noqa: ANN401, ARG002
         """Midea Water Heater update state."""
         if not self.hass:
-            _LOGGER.warning(
-                "Water update_state skipped for %s [%s]: HASS is None",
-                self.name,
+            _LOGGER.debug(
+                "Water update_state skipped before add: name=%s type=%s",
+                self._attr_name or self._entity_key,
                 type(self),
             )
             return

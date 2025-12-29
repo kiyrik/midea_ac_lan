@@ -103,7 +103,7 @@ class MideaHumidifier(MideaEntity, HumidifierEntity):
     def update_state(self, status: Any) -> None:  # noqa: ANN401, ARG002
         """Midea Humidifier update state."""
         if not self.hass:
-            _LOGGER.warning(
+            _LOGGER.debug(
                 "Humidifier update_state skipped before add: device=%s key=%s type=%s",
                 getattr(self._device, "device_id", "unknown"),
                 getattr(self, "_entity_key", "unknown"),
@@ -139,4 +139,3 @@ class MideaFDHumidifier(MideaHumidifier):
         self._attr_max_humidity: float = 85
         self._attr_device_class = HumidifierDeviceClass.HUMIDIFIER
         self._attr_supported_features = HumidifierEntityFeature.MODES
-

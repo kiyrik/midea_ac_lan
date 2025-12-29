@@ -175,7 +175,7 @@ class MideaLight(MideaEntity, LightEntity):
     def update_state(self, status: Any) -> None:  # noqa: ANN401,ARG002
         """Midea Light update state."""
         if not self.hass:
-            _LOGGER.warning(
+            _LOGGER.debug(
                 "Light update_state skipped before add: device=%s key=%s type=%s",
                 getattr(self._device, "device_id", "unknown"),
                 getattr(self, "_entity_key", "unknown"),

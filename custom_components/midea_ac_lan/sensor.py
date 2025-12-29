@@ -44,6 +44,7 @@ class MideaSensor(MideaEntity, SensorEntity):
     @property
     def native_value(self) -> StateType:
         """Return entity value."""
+        # Primary value only
         return cast("StateType", self._device.get_attribute(self._entity_key))
 
     @property

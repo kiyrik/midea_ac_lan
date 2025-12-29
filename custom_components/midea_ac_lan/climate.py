@@ -244,9 +244,9 @@ class MideaClimate(MideaEntity, ClimateEntity):
     def update_state(self, status: Any) -> None:  # noqa: ANN401, ARG002
         """Midea Climate update state."""
         if not self.hass:
-            _LOGGER.warning(
-                "Climate update_state skipped for %s [%s]: HASS is None",
-                self.name,
+            _LOGGER.debug(
+                "Climate update_state skipped before add: name=%s type=%s",
+                self._attr_name or self._entity_key,
                 type(self),
             )
             return

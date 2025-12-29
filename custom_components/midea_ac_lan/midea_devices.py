@@ -1260,6 +1260,8 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
                 "min": 0,
                 "max": 10,
                 "step": 1,
+                "default": True,
+                "entity_category": "config",
             },
             C3Attributes.zone2_curve_type: {
                 "type": Platform.NUMBER,
@@ -1269,6 +1271,8 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
                 "min": 0,
                 "max": 10,
                 "step": 1,
+                "default": True,
+                "entity_category": "config",
             },
             C3Attributes.zone1_power: {
                 "type": Platform.SWITCH,
@@ -1388,7 +1392,7 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
             C3Attributes.fan_speed: {"type": Platform.SENSOR, "translation_key": "fan_speed", "name": "Fan Speed", "icon": "mdi:fan", "unit": "rpm", "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.dc_bus_voltage: {"type": Platform.SENSOR, "translation_key": "dc_bus_voltage", "name": "DC Bus Voltage", "device_class": SensorDeviceClass.VOLTAGE, "unit": "V", "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.dc_current: {"type": Platform.SENSOR, "translation_key": "dc_current", "name": "DC Current", "device_class": SensorDeviceClass.CURRENT, "unit": "A", "state_class": SensorStateClass.MEASUREMENT},
-            C3Attributes.compressor_current: {"type": Platform.SENSOR, "translation_key": "compressor_current", "name": "Compressor Current", "device_class": SensorDeviceClass.CURRENT, "unit": "A", "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.odu_comp_current: {"type": Platform.SENSOR, "translation_key": "compressor_current", "name": "Compressor Current", "device_class": SensorDeviceClass.CURRENT, "unit": "A", "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.current_unit_capacity_kw: {"type": Platform.SENSOR, "translation_key": "hp_capacity", "name": "Heat Pump Capacity", "device_class": SensorDeviceClass.POWER, "unit": UnitOfPower.KILO_WATT, "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.temp_ta: {"type": Platform.SENSOR, "translation_key": "temp_ta", "name": "Ambient Temperature", "device_class": SensorDeviceClass.TEMPERATURE, "unit": UnitOfTemperature.CELSIUS, "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.temp_tw_in: {"type": Platform.SENSOR, "translation_key": "temp_tw_in", "name": "Water Inlet Temperature", "device_class": SensorDeviceClass.TEMPERATURE, "unit": UnitOfTemperature.CELSIUS, "state_class": SensorStateClass.MEASUREMENT},
