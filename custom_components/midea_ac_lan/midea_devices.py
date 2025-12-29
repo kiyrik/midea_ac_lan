@@ -9,7 +9,9 @@ from homeassistant.const import (
     CONCENTRATION_PARTS_PER_MILLION,
     PERCENTAGE,
     Platform,
-    UnitOfEnergy,`n    UnitOfPressure,`n    UnitOfPower,
+    UnitOfEnergy,
+    UnitOfPressure,
+    UnitOfPower,
     UnitOfTemperature,
     UnitOfTime,
     UnitOfVolume,
@@ -52,7 +54,8 @@ from midealocal.devices.x40 import DeviceAttributes as X40Attributes
 """
 Entity Naming Rule:
 
-1. `name` used in web UI enable/disable extra sensor/control setting
+1. 
+ame` used in web UI enable/disable extra sensor/control setting
 2. entity `_attr_name` exist will ignore `translation_key`
 3. no `_attr_name` and no `translation_key` will try `device_class`
 4. refer to `midea_entity.py` comments for translation order
@@ -2931,6 +2934,7 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
         },
     },
 }
+
 
 
 
