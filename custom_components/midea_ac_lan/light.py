@@ -176,9 +176,8 @@ class MideaLight(MideaEntity, LightEntity):
         """Midea Light update state."""
         if not self.hass:
             _LOGGER.warning(
-                "Light update_state skipped for %s [%s]: HASS is None",
-                self.name,
-                type(self),
+                "Light update_state skipped before add: device=%s key=%s type=%s",\n                getattr(self._device, "device_id", "unknown"),\n                getattr(self, "_entity_key", "unknown"),\n                type(self),
             )
             return
         self.schedule_update_ha_state()
+

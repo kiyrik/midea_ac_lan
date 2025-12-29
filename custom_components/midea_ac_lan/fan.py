@@ -135,9 +135,7 @@ class MideaFan(MideaEntity, FanEntity):
         """Midea Fan update state."""
         if not self.hass:
             _LOGGER.warning(
-                "Fan update_state skipped for %s [%s]: HASS is None",
-                self.name,
-                type(self),
+                "Fan update_state skipped before add: device=%s key=%s type=%s",\n                getattr(self._device, "device_id", "unknown"),\n                getattr(self, "_entity_key", "unknown"),\n                type(self),
             )
             return
         self.schedule_update_ha_state()
@@ -318,3 +316,4 @@ class MideaX40Fan(MideaFan):
     def turn_off(self, **kwargs: Any) -> None:  # noqa: ANN401, ARG002
         """Midea X40 Fan turn off."""
         self._device.set_attribute(attr=X40Attributes.fan_speed, value=0)
+
