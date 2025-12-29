@@ -54,8 +54,7 @@ from midealocal.devices.x40 import DeviceAttributes as X40Attributes
 """
 Entity Naming Rule:
 
-1. 
-ame` used in web UI enable/disable extra sensor/control setting
+1. `name` used in web UI enable/disable extra sensor/control setting
 2. entity `_attr_name` exist will ignore `translation_key`
 3. no `_attr_name` and no `translation_key` will try `device_class`
 4. refer to `midea_entity.py` comments for translation order
@@ -1406,7 +1405,7 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
             C3Attributes.ibh1_output: {"type": Platform.BINARY_SENSOR, "translation_key": "ibh1_output", "name": "IBH1 Output", "icon": "mdi:radiator", "device_class": BinarySensorDeviceClass.RUNNING},
             C3Attributes.comp_run_freq: {"type": Platform.SENSOR, "translation_key": "comp_run_freq", "name": "Compressor Frequency", "icon": "mdi:sine-wave", "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.water_pressure: {"type": Platform.SENSOR, "translation_key": "water_pressure", "name": "Water Pressure", "device_class": SensorDeviceClass.PRESSURE, "unit": UnitOfPressure.KPA, "state_class": SensorStateClass.MEASUREMENT},
-            },
+        },
     },
     0xCA: {
         "name": "Refrigerator",
@@ -2971,4 +2970,3 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
         },
     },
 }
-
