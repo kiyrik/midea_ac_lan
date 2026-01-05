@@ -1,4 +1,4 @@
-"""Devices configuration for Midea Lan."""
+﻿"""Devices configuration for Midea Lan."""
 
 from typing import Any
 
@@ -1395,7 +1395,7 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
             C3Attributes.instant_power0: {"type": Platform.SENSOR, "translation_key": "instant_power", "name": "Instant Power", "device_class": SensorDeviceClass.POWER, "unit": UnitOfPower.WATT, "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.instant_renew_power0: {"type": Platform.SENSOR, "translation_key": "instant_renew_power", "name": "Instant Renewable Power", "device_class": SensorDeviceClass.POWER, "unit": UnitOfPower.WATT, "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.exv_steps: {"type": Platform.SENSOR, "translation_key": "exv_steps", "name": "EXV Steps", "icon": "mdi:valve", "state_class": SensorStateClass.MEASUREMENT},
-            C3Attributes.water_flow_m3h: {"type": Platform.SENSOR, "translation_key": "water_flow", "name": "Water Flow", "icon": "mdi:water-sync", "unit": "mÂ³/h", "state_class": SensorStateClass.MEASUREMENT},
+            C3Attributes.water_flow_m3h: {"type": Platform.SENSOR, "translation_key": "water_flow", "name": "Water Flow", "icon": "mdi:water-sync", "unit": "m3/h", "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.fan_speed: {"type": Platform.SENSOR, "translation_key": "fan_speed", "name": "Fan Speed", "icon": "mdi:fan", "unit": "rpm", "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.dc_bus_voltage: {"type": Platform.SENSOR, "translation_key": "dc_bus_voltage", "name": "DC Bus Voltage", "device_class": SensorDeviceClass.VOLTAGE, "unit": "V", "state_class": SensorStateClass.MEASUREMENT},
             C3Attributes.dc_current: {"type": Platform.SENSOR, "translation_key": "dc_current", "name": "DC Current", "device_class": SensorDeviceClass.CURRENT, "unit": "A", "state_class": SensorStateClass.MEASUREMENT},
