@@ -246,7 +246,7 @@ class MideaClimate(MideaEntity, ClimateEntity):
         if not self.hass:
             _LOGGER.debug(
                 "Climate update_state skipped before add: name=%s type=%s",
-                self._attr_name or self._entity_key,
+                getattr(self, "_attr_name", None) or getattr(self, "_entity_key", "unknown"),
                 type(self),
             )
             return
